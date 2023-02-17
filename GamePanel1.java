@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 import java.awt.event.ActionListener;
 import java.util.Random;
 import javax.swing.JPanel;
@@ -170,7 +170,7 @@ public class GamePanel1 extends JPanel implements ActionListener{
         }
     }
 
-    public class MyKeyAdapter implements KeyListener {
+    public class MyKeyAdapter extends KeyAdapter{
         @Override
         public void keyPressed(KeyEvent e) {
             switch(e.getKeyCode()) {
@@ -196,16 +196,5 @@ public class GamePanel1 extends JPanel implements ActionListener{
                     break;
             }
         }
-        @Override
-        public void keyTyped(KeyEvent e) {
-            // TODO Auto-generated method stub
-        
-        }
-            @Override
-        public void keyReleased(KeyEvent e) {
-            // TODO Auto-generated method stub
-                
-            }
     }
-    
 }
